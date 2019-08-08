@@ -7,3 +7,9 @@ steps:
   args: ["push", "gcr.io/$PROJECT_ID/hello-war:$COMMIT_SHA"]
 - name: 'gcr.io/cloud-builders/docker'
   args: ["push", "gcr.io/$PROJECT_ID/hello-war:latest"]
+- name: 'gcr.io/cloud-builders/gke-deploy:stable'
+  args:
+  - run
+  - --image=gcr.io/$PROJECT_ID/hello-war:latest
+  - --location=us-central1-a
+  - --cluster=ad-k8s-cluster
