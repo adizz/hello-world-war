@@ -13,3 +13,6 @@ steps:
   - --image=gcr.io/$PROJECT_ID/hello-war:latest
   - --location=us-central1-a
   - --cluster=ad-k8s-cluster
+  - --app=hello_world-war
+  - --expose=8080
+  - --namespace=default
