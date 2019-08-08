@@ -4,4 +4,6 @@ steps:
 - name: 'ubuntu'
   args: ['ls']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ["build", "-t", "gcr.io/my-project/hello-war:$REVISION_ID", "."]
+  args: ["build", "-t", "gcr.io/my-project/hello-war:$REVISION_ID", "-t", "gcr.io/my-project/hello-war:latest", "."]
+- name: 'gcr.io/cloud-builders/docker'
+  args: ["push", "gcr.io/my-project/hello-war:$REVISION_ID"]
