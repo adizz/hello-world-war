@@ -14,5 +14,7 @@ steps:
   - --location=us-central1-a
   - --cluster=ad-k8s-cluster
   - --app=hello-world-war
-  - --expose=80:8080
+  #- --expose=80:8080
   - --namespace=default
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: ['expose', 'deployment', 'hello-world-war', '--type=LoadBalancer', '--port=80', 'targetPort=8080']
