@@ -17,4 +17,4 @@ steps:
   #- --expose=80:8080
   - --namespace=default
 - name: 'gcr.io/cloud-builders/kubectl'
-  args: ['expose', 'deployment', 'hello-war', '--type=LoadBalancer', '--port=80', 'targetPort=8080']
+  args: ['expose', 'deployment', 'hello-war', '--type=LoadBalancer', '--port=80', 'target-port=8080']
