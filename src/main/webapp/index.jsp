@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Hello World!</title>
+<title>Cloud Build Test</title>
 </head>
 <body>
 	<h1>Hello World!</h1>
